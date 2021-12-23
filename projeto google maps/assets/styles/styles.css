@@ -1,0 +1,134 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+      
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container{
+        position: fixed;
+        z-index: 99;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+
+      }
+      .container.mostrar{
+        display: flex;
+        animation: down 0.5s;
+      }
+
+      form{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          background: linear-gradient(0deg, #000080,#FFFF00 70%);
+          padding: 2vh 10vw;
+          border-radius: 20px;
+          position: absolute;
+      }
+
+      .infos{
+          display: flex;
+          flex-direction: column;
+      }
+
+      .info--nome, .info--desc{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .info--nome label, .info--desc label{
+        font-size: 12pt;
+        text-align: center;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
+      }
+
+      .info--nome input{
+        border: 1px solid white;
+        border-radius: 75px;
+        padding: 10px 5px;
+      }
+
+      .info--desc textarea{
+        border: none;
+        border-radius: 10px;
+        padding: 5px 5px;
+      }
+    
+      .save{
+        padding: 2vh 2vw;
+        font-size: 10pt;
+        margin-top: 3vh;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 25px;
+        transition: all ease 0.3s;
+      }
+      .save:hover{
+        background-color: #FFFF00;
+        color: white;
+      }
+      
+      .close{
+          position: absolute;
+          top: 2vh;
+          right: 3vw;   
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: none;
+          cursor:pointer;
+          background-color: white;
+          transition: all ease 0.3s;
+      }
+      .close:hover{
+        background-color: #23A1EB;
+        color: white;
+      }
+
+      #content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-width: 15vw;
+      }
+
+      #content h3,p{
+        margin: 0 0 2vh 0;
+        padding: 0;
+      }
+
+      #content p{
+        font-size: 11pt;
+      }
+
+      .gm-style-iw.gm-style-iw-c{
+        background: linear-gradient(0deg, #000080,#FFFF00  70%);
+      }
+
+      @keyframes down {
+        from{
+            opacity: 0;
+            transform: translate3d(0,-60px, 0);
+        }
+        to{
+            opacity: 1;
+            transform: translate3d(0,0,0);
+        }
+        
+      }
+      
