@@ -32,7 +32,7 @@ async function getPontos(req, res){
         res.status(200).send(resultado.rows)
 }
 
-
+//
 module.exports = {
     addPonto,
     getPontos
